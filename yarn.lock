@@ -153,7 +153,12 @@
   resolved "https://registry.yarnpkg.com/@angular-eslint/bundled-angular-compiler/-/bundled-angular-compiler-15.1.0.tgz#9e86e8cef2631b044e76fcfede5553fc07262a5d"
   integrity sha512-zcOx+PnYuVDIG3wd/JVzCYdEUarKGtgIcN4iU9ZF+BVk5e8i9cbD3U8U3EDJKbrrokbFl9GBBJMCOa6XYTGJwQ==
 
-"@angular-eslint/eslint-plugin-template@15.1.0", "@angular-eslint/eslint-plugin-template@^15.1.0":
+"@angular-eslint/bundled-angular-compiler@15.2.0":
+  version "15.2.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/bundled-angular-compiler/-/bundled-angular-compiler-15.2.0.tgz#506f94c96039346f33ba92222062edbf3943543e"
+  integrity sha512-a0bfXxYyGoWJHrVQ4QER0HdRgselcTtJeyqiFPAxID2ZxF0IBGKLNTtugUTXekEmiLev8yGLX9TqAtthN57fEg==
+
+"@angular-eslint/eslint-plugin-template@15.1.0":
   version "15.1.0"
   resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-15.1.0.tgz#5635761fdb3eff22f9cf2d75e782a94c73a162f5"
   integrity sha512-WofUNiLcO/oprnzswkF+u1PC6ulmqB/m7fNKMMnbExMYuK1P38gjp59FW7E+2Ivz+A4/8a5xV+U+cy3oRgh4NQ==
@@ -162,6 +167,18 @@
     "@angular-eslint/utils" "15.1.0"
     "@typescript-eslint/type-utils" "5.44.0"
     "@typescript-eslint/utils" "5.44.0"
+    aria-query "5.1.3"
+    axobject-query "3.1.1"
+
+"@angular-eslint/eslint-plugin-template@^15.2.0":
+  version "15.2.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/eslint-plugin-template/-/eslint-plugin-template-15.2.0.tgz#a7348bdddcdab51031439b9f9e09ea9bb9236484"
+  integrity sha512-aL3czf5Jpv29rKN3UG20tQepX1+V0d6xc0g+1l0zPHZJYjVd6Oy0nIxWiGfl4yanaXiVpmxiV4vUcLlqqaFwbw==
+  dependencies:
+    "@angular-eslint/bundled-angular-compiler" "15.2.0"
+    "@angular-eslint/utils" "15.2.0"
+    "@typescript-eslint/type-utils" "5.48.1"
+    "@typescript-eslint/utils" "5.48.1"
     aria-query "5.1.3"
     axobject-query "3.1.1"
 
@@ -199,6 +216,14 @@
   dependencies:
     "@angular-eslint/bundled-angular-compiler" "15.1.0"
     "@typescript-eslint/utils" "5.44.0"
+
+"@angular-eslint/utils@15.2.0":
+  version "15.2.0"
+  resolved "https://registry.yarnpkg.com/@angular-eslint/utils/-/utils-15.2.0.tgz#3a0ecc9d9d6877fbdaa9d24208071a5cdbbe5945"
+  integrity sha512-qfTOKQ+aef/YER679/xN1E+FkZKMd0I73P6txUZAb9k2G1ACVktG+wOUIBfgjIlUVq9Q01AV91LGOWcd+rdEEA==
+  dependencies:
+    "@angular-eslint/bundled-angular-compiler" "15.2.0"
+    "@typescript-eslint/utils" "5.48.1"
 
 "@angular/animations@^15.1.0":
   version "15.1.0"

@@ -98,7 +98,7 @@
         "@commitlint/config-angular": "^17.6.1",
         "@compodoc/compodoc": "^1.1.19",
         "@types/jasmine": "~4.3.1",
-        "@types/node": "^16.18.23",
+        "@types/node": "^18.15.13",
         "@typescript-eslint/eslint-plugin": "^5.59.0",
         "@typescript-eslint/parser": "^5.59.0",
         "angular-cli-ghpages": "^1.0.5",

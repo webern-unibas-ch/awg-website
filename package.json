@@ -94,7 +94,7 @@
         "@angular/cli": "^17.0.10",
         "@angular/compiler-cli": "^17.0.9",
         "@angular/language-service": "^17.0.9",
-        "@commitlint/cli": "^18.4.4",
+        "@commitlint/cli": "^18.5.0",
         "@commitlint/config-angular": "^18.4.4",
         "@compodoc/compodoc": "^1.1.23",
         "@types/jasmine": "~5.1.4",

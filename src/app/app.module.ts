@@ -1,5 +1,5 @@
 import { registerLocaleData } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import localeDeDE from '@angular/common/locales/de';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,13 +23,11 @@ registerLocaleData(localeDeDE);
 
 @NgModule({
     declarations: [AppComponent, routedComponents],
+    bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        HttpClientModule,
-
         SharedModule,
-
         CoreModule,
         ContactModule,
         EditionModule,
@@ -37,10 +35,11 @@ registerLocaleData(localeDeDE);
         ResearchModule,
         WebernModule,
         WorksModule,
-
-        AppRoutingModule, // Has to be last routed Module
+        AppRoutingModule,
     ],
-    providers: [{ provide: LOCALE_ID, useValue: 'de-DE' }], // Change global LOCALE-ID
-    bootstrap: [AppComponent],
+    providers: [
+        { provide: LOCALE_ID, useValue: 'de-DE' }, // Change global LOCALE-ID
+        provideHttpClient(withInterceptorsFromDi()),
+    ],
 })
 export class AppModule {}

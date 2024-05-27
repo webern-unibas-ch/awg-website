@@ -13,7 +13,7 @@ on:
 
 permissions:
     contents: read
-    
+
 # globals
 env:
     # general settings
@@ -26,12 +26,12 @@ jobs:
         strategy:
             matrix:
                 os: [ubuntu-latest]
-                node-version: [18.19, 20.9]
+                node-version: [18.19, 20.13]
         steps:
             - name: Harden Runner
               uses: step-security/harden-runner@f086349bfa2bd1361f7909c78558e816508cdc10 # v2.8.0
               with:
-                egress-policy: audit
+                  egress-policy: audit
 
             - name: Checkout repo
               uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
@@ -55,24 +55,24 @@ jobs:
     deploy:
         # run only on main
         if: github.ref == 'refs/heads/main'
-        
+
         name: Deploy app from main (Node v${{ matrix.node-version }}, ${{ matrix.os }})
         runs-on: ${{ matrix.os }}
         needs: test
 
         permissions:
             contents: write
-        
+
         strategy:
             matrix:
                 os: [ubuntu-latest]
-                node-version: [20.9]
-        
+                node-version: [20.13]
+
         steps:
             - name: Harden Runner
               uses: step-security/harden-runner@f086349bfa2bd1361f7909c78558e816508cdc10 # v2.8.0
               with:
-                egress-policy: audit
+                  egress-policy: audit
 
             - name: Checkout repo
               uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4.1.6
@@ -99,24 +99,24 @@ jobs:
     release:
         # run only on tags
         if: startsWith(github.ref, 'refs/tags/')
-        
+
         name: Create Release from tag
         runs-on: ${{ matrix.os }}
         needs: test
 
         permissions:
             contents: write
-            
+
         strategy:
             matrix:
                 os: [ubuntu-latest]
-                node-version: [20.9]
-        
+                node-version: [20.13]
+
         steps:
             - name: Harden Runner
               uses: step-security/harden-runner@f086349bfa2bd1361f7909c78558e816508cdc10 # v2.8.0
               with:
-                egress-policy: audit
+                  egress-policy: audit
 
             - name: Get tag version
               id: get_version

@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { WebernBibliographyComponent } from './webern-bibliography.component';
 
@@ -6,11 +6,11 @@ describe('WebernBibliographyComponent', () => {
     let component: WebernBibliographyComponent;
     let fixture: ComponentFixture<WebernBibliographyComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
             declarations: [WebernBibliographyComponent],
         }).compileComponents();
-    });
+    }));
 
     beforeEach(() => {
         fixture = TestBed.createComponent(WebernBibliographyComponent);

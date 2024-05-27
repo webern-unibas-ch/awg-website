@@ -8,15 +8,15 @@ describe('ContactImprintComponent', () => {
     let component: ContactImprintComponent;
     let fixture: ComponentFixture<ContactImprintComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    beforeEach(waitForAsync(() => {
+        TestBed.configureTestingModule({
             declarations: [ContactImprintComponent, RouterLinkStubDirective],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ContactImprintComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
-    });
+    }));
 
     it('should create', () => {
         expect(component).toBeTruthy();

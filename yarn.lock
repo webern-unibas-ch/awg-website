@@ -2588,12 +2588,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-angular@npm:^19.3.0":
-  version: 19.3.0
-  resolution: "@commitlint/config-angular@npm:19.3.0"
+"@commitlint/config-angular@npm:^19.4.1":
+  version: 19.4.1
+  resolution: "@commitlint/config-angular@npm:19.4.1"
   dependencies:
     "@commitlint/config-angular-type-enum": "npm:^19.1.0"
-  checksum: 10c0/b20966ea62f65f5254740c592c1ef5ca1504cee716f9f24455a57ecd25a10a76c67403d978d9a286b3dd7171d6aa27a1d980406d1504111af0a292c853374a63
+  checksum: 10c0/3b7ffe70cecab2c7b34902dbd161ffc365d91a1ad564d42eea22de374b769e5a9219a7e2a6ec9df02d6236904786914cc3229c7b501346716ba97c4d2727af06
   languageName: node
   linkType: hard
 
@@ -5461,7 +5461,7 @@ __metadata:
     "@angular/platform-browser-dynamic": "npm:^18.2.0"
     "@angular/router": "npm:^18.2.0"
     "@commitlint/cli": "npm:^19.4.0"
-    "@commitlint/config-angular": "npm:^19.3.0"
+    "@commitlint/config-angular": "npm:^19.4.1"
     "@compodoc/compodoc": "npm:^1.1.25"
     "@eslint/compat": "npm:^1.1.1"
     "@eslint/eslintrc": "npm:^3.1.0"

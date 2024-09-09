@@ -374,14 +374,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/animations@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/animations@npm:18.2.1"
+"@angular/animations@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/animations@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/core": 18.2.1
-  checksum: 10c0/2ccc689134cb8fc34f05ec6c4805b738b090650160942088a998077702beb666005f84096b54672fc7d8a71bc1b93cbc2e49a7e9b8467906e662ef5858fa4be9
+    "@angular/core": 18.2.3
+  checksum: 10c0/a6e6b7bca79889e670e053674ef1ccd5c4bba26b5144385e2e08e8a5c1527446d19688bc52bde4e1365a741e6113708367468096603ac1ed820994cdd6aabe16
   languageName: node
   linkType: hard
 
@@ -494,21 +494,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/common@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/common@npm:18.2.1"
+"@angular/common@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/common@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/core": 18.2.1
+    "@angular/core": 18.2.3
     rxjs: ^6.5.3 || ^7.4.0
-  checksum: 10c0/6a8e284c7851b87da3c2c1aeeb5f59148abe02a17aa040838b0d734976952b3f4aa72d1c348d09e153cca0c42351d2bfd2fb923a1f6f52939c3e09dd7ee0241a
+  checksum: 10c0/ce3b5ae6e70fdeb23a1164bf2436ab925e48efb118c7f8fd85869af7eb97844d1d0c72069644153eab7d8dde066504014ff8b38e5e61aab749b349f796eec3b7
   languageName: node
   linkType: hard
 
-"@angular/compiler-cli@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/compiler-cli@npm:18.2.1"
+"@angular/compiler-cli@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/compiler-cli@npm:18.2.3"
   dependencies:
     "@babel/core": "npm:7.25.2"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
@@ -519,79 +519,79 @@ __metadata:
     tslib: "npm:^2.3.0"
     yargs: "npm:^17.2.1"
   peerDependencies:
-    "@angular/compiler": 18.2.1
+    "@angular/compiler": 18.2.3
     typescript: ">=5.4 <5.6"
   bin:
     ng-xi18n: bundles/src/bin/ng_xi18n.js
     ngc: bundles/src/bin/ngc.js
     ngcc: bundles/ngcc/index.js
-  checksum: 10c0/ab50e3b90851f99ecbb6101513022eb0da0a4793f3cf8d8d0bd16e773c628c3e6ac5f659bc1bee6550d91ea9a2d50a5777d9f0c5b37e1b3073e818343deb6d4e
+  checksum: 10c0/41ea24eba5a9990c7878879553cb3fbffaacbcc3a22e5d4397ad3e7325e3890c312cdbe6efbc8d95a46124c63654598bb58be60fc81a46e0f3dc78480fc0760a
   languageName: node
   linkType: hard
 
-"@angular/compiler@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/compiler@npm:18.2.1"
+"@angular/compiler@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/compiler@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/core": 18.2.1
+    "@angular/core": 18.2.3
   peerDependenciesMeta:
     "@angular/core":
       optional: true
-  checksum: 10c0/bcc9f8a846d0b702d66f838cada5fe0b640e64627dc05f0dfae37c3a22e404aa396edb83056b7f85ff644c9832b4523afe0eb7649d2cf3824fc5cbb6e443f35d
+  checksum: 10c0/d2ed8dc2e33d863f17931658487b2af6d880605ee3e0cff71bccdc6a8be1e852cb0097ccdb8679401aaeaee758e3f4d1c39c02ec09342fb17a2cb07bc8994fc3
   languageName: node
   linkType: hard
 
-"@angular/core@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/core@npm:18.2.1"
+"@angular/core@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/core@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
     rxjs: ^6.5.3 || ^7.4.0
     zone.js: ~0.14.10
-  checksum: 10c0/3f07ad03fea9d613c00431e998bb6f272779817e86140fe6dd6a551bd07e8b76dfbf3c06d99ebbddf0b6bd39f1dfd97ff91ca948543338dd52d052b7923f41ad
+  checksum: 10c0/c8e8ac763bb6150b76d8c47111fa9a7db9d6cddf39f0a2d93cb89678029717e6e36b89b7cd8f819c5162a14e829ad291394eaabb072578de5c32d19dba68d3c5
   languageName: node
   linkType: hard
 
-"@angular/forms@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/forms@npm:18.2.1"
+"@angular/forms@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/forms@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/common": 18.2.1
-    "@angular/core": 18.2.1
-    "@angular/platform-browser": 18.2.1
+    "@angular/common": 18.2.3
+    "@angular/core": 18.2.3
+    "@angular/platform-browser": 18.2.3
     rxjs: ^6.5.3 || ^7.4.0
-  checksum: 10c0/ea3e424f12abc391581e2347b3453fc9f6f8267e6ce7ab3f1653b231a4e754a65741aa2292f6ee7508acf012920842b339a3fbd4cb8b168ad842569e345ceb8d
+  checksum: 10c0/95e778f6e7bd27131dbf14503c76f731eb0fcfad73e55d32d59fb510f15f8cb42459ea488e380164b0c62d465356221a81463c226d4e44e454960cb6eea3b19c
   languageName: node
   linkType: hard
 
-"@angular/language-service@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/language-service@npm:18.2.1"
-  checksum: 10c0/765c37d9c23246d1ed3235c39cb4e8a67649a283cc4fe06bcb1c19395b5ea24d4356b5c8d2c53fdf1f22696b4bbac197e9b54d65fb389f01b2933523fab02578
+"@angular/language-service@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/language-service@npm:18.2.3"
+  checksum: 10c0/7885b972230862122e2c42ae0a1bd01f776158f81651d7ead0a2827709d7e9a1e4ab62b64ce846cd1bc31ea3d3367601ffb743cd49ab6add3ac74342b89ebd32
   languageName: node
   linkType: hard
 
-"@angular/localize@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/localize@npm:18.2.1"
+"@angular/localize@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/localize@npm:18.2.3"
   dependencies:
     "@babel/core": "npm:7.25.2"
     "@types/babel__core": "npm:7.20.5"
     fast-glob: "npm:3.3.2"
     yargs: "npm:^17.2.1"
   peerDependencies:
-    "@angular/compiler": 18.2.1
-    "@angular/compiler-cli": 18.2.1
+    "@angular/compiler": 18.2.3
+    "@angular/compiler-cli": 18.2.3
   bin:
     localize-extract: tools/bundles/src/extract/cli.js
     localize-migrate: tools/bundles/src/migrate/cli.js
     localize-translate: tools/bundles/src/translate/cli.js
-  checksum: 10c0/b1170c114fe4e3d4676ddb2db35ea117d60a1bbd221969f3cd75035b647b69e3bbf518a267052dbbc8e25a93ea1f4b22a57aa592b1512efc54916e179908a346
+  checksum: 10c0/31976a0045da07347e1974fff9f51cecf354c1f9cf0c7f4d5a25369f71adc95fea416ef4fe7f71dd879c9f1b01f6f1c34feeae74c81982df4f4c9977e1c3cff7
   languageName: node
   linkType: hard
 
@@ -612,47 +612,47 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/platform-browser-dynamic@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/platform-browser-dynamic@npm:18.2.1"
+"@angular/platform-browser-dynamic@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/platform-browser-dynamic@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/common": 18.2.1
-    "@angular/compiler": 18.2.1
-    "@angular/core": 18.2.1
-    "@angular/platform-browser": 18.2.1
-  checksum: 10c0/511b0a2981fddc9d45d8fd09ec005a79f641ce8a5fe25488ebba979a20330d654e8aeab47c6d4eb3300b19e213c9451664e439db52b688434ea6f570e2902119
+    "@angular/common": 18.2.3
+    "@angular/compiler": 18.2.3
+    "@angular/core": 18.2.3
+    "@angular/platform-browser": 18.2.3
+  checksum: 10c0/422a8e3d2989c4bfab15f14ae3618ee4ddd8744502dd57f5140c6765e825bdcf21b7bcb5c203945f80a2c7e64e18a4a8d00f576d903dd24d35a2df046bff4e6d
   languageName: node
   linkType: hard
 
-"@angular/platform-browser@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/platform-browser@npm:18.2.1"
+"@angular/platform-browser@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/platform-browser@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/animations": 18.2.1
-    "@angular/common": 18.2.1
-    "@angular/core": 18.2.1
+    "@angular/animations": 18.2.3
+    "@angular/common": 18.2.3
+    "@angular/core": 18.2.3
   peerDependenciesMeta:
     "@angular/animations":
       optional: true
-  checksum: 10c0/c7feb1ef7f238663100568facba864e7557fbec88991ac07ec7f68215149d831fe0164fa34969b633279cfbce20cfc7678f90b2f22a12afa6db228d1a26b228c
+  checksum: 10c0/ef21758b368ef4aa84b44f9c7147df138b1051f4f6e3270fa5484ab9a0df47597d7f1bd9725061a4b0e0cc010d15d1769601970349c54a67211a0ad367d4dadf
   languageName: node
   linkType: hard
 
-"@angular/router@npm:^18.2.1":
-  version: 18.2.1
-  resolution: "@angular/router@npm:18.2.1"
+"@angular/router@npm:^18.2.3":
+  version: 18.2.3
+  resolution: "@angular/router@npm:18.2.3"
   dependencies:
     tslib: "npm:^2.3.0"
   peerDependencies:
-    "@angular/common": 18.2.1
-    "@angular/core": 18.2.1
-    "@angular/platform-browser": 18.2.1
+    "@angular/common": 18.2.3
+    "@angular/core": 18.2.3
+    "@angular/platform-browser": 18.2.3
     rxjs: ^6.5.3 || ^7.4.0
-  checksum: 10c0/6bbf49167f161fd5e42274e295692426b24bbbbd6cc09ca05cd3e3619e36f8040aa8652dbf1417a08398900fbef93773e4195ddbdf623eb07206f8d7abb79f4e
+  checksum: 10c0/724d9b46659f440067e079df2c9e8cbc5fa98aad1b325bfc334fcf469be4943055b13156d725a12c916137b8b4d7cd2b21234923fb4637ba25efa9ced3d43e0b
   languageName: node
   linkType: hard
 
@@ -5424,20 +5424,20 @@ __metadata:
     "@angular-eslint/eslint-plugin-template": "npm:^18.3.0"
     "@angular-eslint/schematics": "npm:^18.3.0"
     "@angular-eslint/template-parser": "npm:^18.3.0"
-    "@angular/animations": "npm:^18.2.1"
+    "@angular/animations": "npm:^18.2.3"
     "@angular/cdk": "npm:^18.2.1"
     "@angular/cli": "npm:^18.2.3"
-    "@angular/common": "npm:^18.2.1"
-    "@angular/compiler": "npm:^18.2.1"
-    "@angular/compiler-cli": "npm:^18.2.1"
-    "@angular/core": "npm:^18.2.1"
-    "@angular/forms": "npm:^18.2.1"
-    "@angular/language-service": "npm:^18.2.1"
-    "@angular/localize": "npm:^18.2.1"
+    "@angular/common": "npm:^18.2.3"
+    "@angular/compiler": "npm:^18.2.3"
+    "@angular/compiler-cli": "npm:^18.2.3"
+    "@angular/core": "npm:^18.2.3"
+    "@angular/forms": "npm:^18.2.3"
+    "@angular/language-service": "npm:^18.2.3"
+    "@angular/localize": "npm:^18.2.3"
     "@angular/material": "npm:^18.2.1"
-    "@angular/platform-browser": "npm:^18.2.1"
-    "@angular/platform-browser-dynamic": "npm:^18.2.1"
-    "@angular/router": "npm:^18.2.1"
+    "@angular/platform-browser": "npm:^18.2.3"
+    "@angular/platform-browser-dynamic": "npm:^18.2.3"
+    "@angular/router": "npm:^18.2.3"
     "@commitlint/cli": "npm:^19.4.1"
     "@commitlint/config-angular": "npm:^19.4.1"
     "@compodoc/compodoc": "npm:^1.1.25"

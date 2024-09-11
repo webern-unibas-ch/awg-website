@@ -2570,19 +2570,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-angular-type-enum@npm:^19.1.0":
-  version: 19.1.0
-  resolution: "@commitlint/config-angular-type-enum@npm:19.1.0"
-  checksum: 10c0/d5fd020ea5592c08d0855b95cc195ab9270fd262340dd43b8f2d30d45577eed5eb771dfb86d4382323544c4116737349f40c49c44a3bec28e0cd8beec7507990
+"@commitlint/config-angular-type-enum@npm:^19.5.0":
+  version: 19.5.0
+  resolution: "@commitlint/config-angular-type-enum@npm:19.5.0"
+  checksum: 10c0/d8bb2ad6699e3413c8a9647b59cb866be0194c84adc17b1fe3a80c8b4d1fd972c9280940add39a2d79e8482173394b548a0bdebea4be054de94c6db3830a841e
   languageName: node
   linkType: hard
 
-"@commitlint/config-angular@npm:^19.4.1":
-  version: 19.4.1
-  resolution: "@commitlint/config-angular@npm:19.4.1"
+"@commitlint/config-angular@npm:^19.5.0":
+  version: 19.5.0
+  resolution: "@commitlint/config-angular@npm:19.5.0"
   dependencies:
-    "@commitlint/config-angular-type-enum": "npm:^19.1.0"
-  checksum: 10c0/3b7ffe70cecab2c7b34902dbd161ffc365d91a1ad564d42eea22de374b769e5a9219a7e2a6ec9df02d6236904786914cc3229c7b501346716ba97c4d2727af06
+    "@commitlint/config-angular-type-enum": "npm:^19.5.0"
+  checksum: 10c0/80291dec5cb81727931e91d20bf4b48ebded589b57b8d99c15f9ec11efee7c26d0c64207d4702361da8e77bd5dbfbb3620d7a615b0199d60e5123579dad1a0e0
   languageName: node
   linkType: hard
 
@@ -5438,7 +5438,7 @@ __metadata:
     "@angular/platform-browser-dynamic": "npm:^18.2.3"
     "@angular/router": "npm:^18.2.3"
     "@commitlint/cli": "npm:^19.5.0"
-    "@commitlint/config-angular": "npm:^19.4.1"
+    "@commitlint/config-angular": "npm:^19.5.0"
     "@compodoc/compodoc": "npm:^1.1.25"
     "@eslint/compat": "npm:^1.1.1"
     "@eslint/eslintrc": "npm:^3.1.0"

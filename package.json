@@ -111,7 +111,7 @@
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-angular": "^4.1.0",
         "eslint-plugin-import": "^2.30.0",
-        "eslint-plugin-jsdoc": "^50.2.5",
+        "eslint-plugin-jsdoc": "^50.3.0",
         "eslint-plugin-prettier": "^5.2.1",
         "globals": "^15.9.0",
         "gzipper": "^7.2.0",

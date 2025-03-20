@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/droid-sans.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Droid Sans Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/droid-sans-mono.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Droid Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/droid-serif.ttf') format('truetype');
+}

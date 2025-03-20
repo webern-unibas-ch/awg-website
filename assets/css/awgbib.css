@@ -1,0 +1,92 @@
+/* custom css file to style publication list generated via BibBase */
+/* this file overwrites BibBase's simple.css */
+
+/* HEADER */
+#bibbase_header a {
+    text-decoration: none;
+}
+
+#bibbase_header a:hover {
+    border-bottom: 0px;
+}
+
+#bibbase_header i {
+    width: 16px;
+    text-align: center;
+    margin-right: 5px;
+}
+
+#bibbase_header ul.nav.nav-pills {
+    padding-left: 0px;
+}
+
+/* GROUP */
+.bibbase_group_whole:not(:first-child) {
+    margin-top: 40px;
+}
+
+.bibbase_group {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.bibbase_group_count {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.bibbase_group_body {
+    margin-left: 20px;
+}
+
+/* PAPER */
+.bibbase_paper {
+    margin-bottom: 20px;
+}
+
+.bibbase_paper_author::after {
+    content: ":";
+}
+
+.bibbase_paper_title {
+    font-weight: normal !important;
+}
+
+br.bibbase_paper_content {
+    display: block;
+}
+
+/* ICONS */
+/* style for icons */
+img.bibbase_icon {
+    display: inline;
+    width: 20px;
+    max-height: 16px;
+    vertical-align: text-top;
+
+    filter: url("data:image/svg+xml;utf8,<svg%20xmlns='http://www.w3.org/2000/svg'><filter%20id='grayscale'><feColorMatrix%20type='matrix'%20values='0.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200.3333%200.3333%200.3333%200%200%200%200%200%201%200'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: grayscale(100%); /* Current draft standard */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray; /* IE6+ */
+}
+
+img.bibbase_icon:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+/* for pdfs show only icons, no icon text */
+/* bb_icon_text is sibling to bb_icon (selector: +) */
+img.bibbase_icon[title=pdf] + span.bibbase_icon_text {
+    display: none;
+}
+
+
+/* Exclude "BUY" links for now until it is possible to display ISBN links */
+.bibbase_amazon a {
+    display: none;
+}
+

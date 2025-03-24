@@ -23,15 +23,34 @@ a:hover:not(.logolink) {
     border-bottom: 1px solid #149b9e;
 }
 
-p {
+figure {
     margin: 0;
-    padding: 0;
 }
 
 hr {
     background-color: #000;
     height: 1px;
     box-shadow: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+@counter-style lower-alpha-parens {
+    system: extends lower-alpha;
+    suffix: ') ';
+}
+ol.lower-alpha-parens > li {
+    list-style: lower-alpha-parens;
+}
+
+ul li {
+    margin-bottom: 1.5em;
+}
+ul li:last-child {
+    margin-bottom: 0;
 }
 
 #header {
@@ -225,6 +244,10 @@ hr {
     color: #666;
 }
 
+.indented {
+    padding-left: 30px;
+}
+
 .node {
 }
 
@@ -277,8 +300,4 @@ hr {
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
     margin-bottom: 10px;
-}
-
-.indented {
-    padding-left: 30px;
 }

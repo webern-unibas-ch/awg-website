@@ -45,7 +45,7 @@
 }
 
 .bibbase_paper_author::after {
-    content: ":";
+    content: ':';
 }
 
 .bibbase_paper_title {
@@ -80,13 +80,11 @@ img.bibbase_icon:hover {
 
 /* for pdfs show only icons, no icon text */
 /* bb_icon_text is sibling to bb_icon (selector: +) */
-img.bibbase_icon[title=pdf] + span.bibbase_icon_text {
+img.bibbase_icon[title='pdf'] + span.bibbase_icon_text {
     display: none;
 }
-
 
 /* Exclude "BUY" links for now until it is possible to display ISBN links */
 .bibbase_amazon a {
     display: none;
 }
-

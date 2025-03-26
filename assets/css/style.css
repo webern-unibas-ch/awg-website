@@ -27,15 +27,15 @@ figure {
     margin: 0 0 1.5em 0;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
 hr {
     background-color: #000;
     height: 1px;
     box-shadow: 0;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1.5em;
 }
 
 @counter-style lower-alpha-parens {
@@ -248,16 +248,6 @@ ul li:last-child {
     padding-left: 30px;
 }
 
-.mb-0 {
-    margin-bottom: 0;
-}
-.mt-0 {
-    margin-top: 0;
-}
-
-.node {
-}
-
 .node .item {
     width: 100%;
     min-height: 20px;
@@ -300,15 +290,17 @@ ul li:last-child {
     color: #00a4a7;
 }
 
-.news {
+.news,
+.talks {
     margin-bottom: 1.5em;
 }
-.news h4 {
+.news h4,
+.talks h4 {
     margin-top: 0;
     margin-bottom: 0;
 }
-.news p,
-.news figure {
+.news figure,
+.news p {
     margin-bottom: 0;
 }
 

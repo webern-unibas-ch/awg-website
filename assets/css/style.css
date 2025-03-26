@@ -18,8 +18,11 @@ a:visited {
     color: #149b9e;
     text-decoration: none;
 }
-
-a:hover:not(.logolink) {
+a.sitelink {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover:not(.logolink):not(.sitelink) {
     border-bottom: 1px solid #149b9e;
 }
 
@@ -79,30 +82,43 @@ ul li:last-child {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+#footer img {
+    width: 145px;
+    height: 50px;
+}
+#footer .center .sitelink {
+    margin-left: 80px;
+}
+#footer .center .sitelink span {
+    cursor: pointer;
+}
+#footer .center .sitelink span:hover {
+    color: #666;
+}
 
 .content {
     width: 1050px;
     margin: auto;
 }
-
 .content .left,
 .content .center,
 .content .right {
     float: left;
 }
-
 .content .left {
     width: 150px;
     padding-right: 50px;
 }
-
 .content .center {
     width: 600px;
 }
-
 .content .right {
     width: 200px;
     padding-left: 50px;
+}
+
+.footerlogo {
+    cursor: pointer;
 }
 
 #unilogo {
@@ -121,10 +137,6 @@ ul li:last-child {
 
 #webernlogo img {
     width: 375px;
-}
-
-.footerlogo {
-    cursor: pointer;
 }
 
 .language {
@@ -229,19 +241,6 @@ ul li:last-child {
 #righttext img {
     max-width: 200px;
     height: auto;
-}
-
-#footer img {
-    width: 145px;
-    height: 50px;
-}
-
-#footer span {
-    cursor: pointer;
-}
-
-#footer span:hover {
-    color: #666;
 }
 
 .indented {

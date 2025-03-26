@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     font-family: 'Droid Serif', serif;
     font-size: 14px;
     line-height: 1.5;
@@ -11,7 +12,9 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-a, a:link, a:visited {
+a,
+a:link,
+a:visited {
     color: #149b9e;
     text-decoration: none;
 }
@@ -20,9 +23,8 @@ a:hover:not(.logolink) {
     border-bottom: 1px solid #149b9e;
 }
 
-p {
+figure {
     margin: 0;
-    padding: 0;
 }
 
 hr {
@@ -31,10 +33,29 @@ hr {
     box-shadow: 0;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+@counter-style lower-alpha-parens {
+    system: extends lower-alpha;
+    suffix: ') ';
+}
+ol.lower-alpha-parens > li {
+    list-style: lower-alpha-parens;
+}
+
+ul li {
+    margin-bottom: 1.5em;
+}
+ul li:last-child {
+    margin-bottom: 0;
+}
 
 #header {
     font-family: 'Droid Sans', sans-serif;
-    background-color: #FFF;
+    background-color: #fff;
     width: 100%;
     height: 200px;
 }
@@ -52,20 +73,21 @@ hr {
 #footer {
     font-family: 'Droid Sans', sans-serif;
     font-size: 12px;
-    background-color: #FFF;
+    background-color: #fff;
     width: 100%;
     display: inline-block;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-
 .content {
     width: 1050px;
     margin: auto;
 }
 
-.content .left, .content .center, .content .right {
+.content .left,
+.content .center,
+.content .right {
     float: left;
 }
 
@@ -83,14 +105,12 @@ hr {
     padding-left: 50px;
 }
 
-
 #unilogo {
     cursor: pointer;
     margin-top: 80px;
     width: 118px;
     height: 37px;
 }
-
 
 #webernlogo {
     cursor: pointer;
@@ -107,7 +127,6 @@ hr {
     cursor: pointer;
 }
 
-
 .language {
     cursor: pointer;
     letter-spacing: 1.5px;
@@ -121,7 +140,8 @@ hr {
     font-size: 12px;
 }
 
-.language:hover, #contact:hover {
+.language:hover,
+#contact:hover {
     color: #666;
 }
 
@@ -153,7 +173,6 @@ hr {
     border-top: 2px solid #000;
 }
 
-
 #menu {
     font-family: 'Droid Sans', sans-serif;
     font-size: 12px;
@@ -183,7 +202,6 @@ hr {
     height: 55px;
 }
 
-
 #maintext {
     width: 600px;
     height: auto;
@@ -198,7 +216,6 @@ hr {
     height: auto;
 }
 
-
 #righttext {
     font-family: 'Droid Sans', sans-serif;
     font-size: 13px;
@@ -209,18 +226,15 @@ hr {
     padding-bottom: 50px;
 }
 
-
 #righttext img {
     max-width: 200px;
     height: auto;
 }
 
-
 #footer img {
     width: 145px;
     height: 50px;
 }
-
 
 #footer span {
     cursor: pointer;
@@ -230,6 +244,16 @@ hr {
     color: #666;
 }
 
+.indented {
+    padding-left: 30px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+.mt-0 {
+    margin-top: 0;
+}
 
 .node {
 }
@@ -276,7 +300,6 @@ hr {
     color: #00a4a7;
 }
 
-
 .personbox {
     overflow: hidden;
     width: 100%;
@@ -284,4 +307,7 @@ hr {
     padding-bottom: 10px;
     border-bottom: 1px solid #000;
     margin-bottom: 10px;
+}
+.personbox span[property='name'] {
+    font-weight: bold;
 }

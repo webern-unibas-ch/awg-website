@@ -24,7 +24,7 @@ a:hover:not(.logolink) {
 }
 
 figure {
-    margin: 0;
+    margin: 0 0 1.5em 0;
 }
 
 hr {
@@ -298,6 +298,18 @@ ul li:last-child {
 
 .node .item .title .link {
     color: #00a4a7;
+}
+
+.news {
+    margin-bottom: 1.5em;
+}
+.news h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.news p,
+.news figure {
+    margin-bottom: 0;
 }
 
 .personbox {

@@ -89,12 +89,6 @@ ul li:last-child {
 #footer .center .sitelink {
     margin-left: 80px;
 }
-#footer .center .sitelink span {
-    cursor: pointer;
-}
-#footer .center .sitelink span:hover {
-    color: #666;
-}
 
 .content {
     width: 1050px;
@@ -140,21 +134,14 @@ ul li:last-child {
 }
 
 .language {
-    cursor: pointer;
     letter-spacing: 1.5px;
     font-size: 12px;
 }
 
 #contact {
-    cursor: pointer;
     letter-spacing: 1.5px;
     float: right;
     font-size: 12px;
-}
-
-.language:hover,
-#contact:hover {
-    color: #666;
 }
 
 #submenu {
@@ -313,4 +300,11 @@ ul li:last-child {
 }
 .personbox span[property='name'] {
     font-weight: bold;
+}
+
+.sitelink span {
+    cursor: pointer;
+}
+.sitelink span:hover {
+    color: #666;
 }

@@ -18,24 +18,27 @@ a:visited {
     color: #149b9e;
     text-decoration: none;
 }
-
-a:hover:not(.logolink) {
+a.sitelink {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover:not(.logolink):not(.sitelink) {
     border-bottom: 1px solid #149b9e;
 }
 
 figure {
-    margin: 0;
+    margin: 0 0 1.5em 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
 }
 
 hr {
     background-color: #000;
     height: 1px;
     box-shadow: 0;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 1.5em;
 }
 
 @counter-style lower-alpha-parens {
@@ -79,30 +82,37 @@ ul li:last-child {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+#footer img {
+    width: 145px;
+    height: 50px;
+}
+#footer .center .sitelink {
+    margin-left: 80px;
+}
 
 .content {
     width: 1050px;
     margin: auto;
 }
-
 .content .left,
 .content .center,
 .content .right {
     float: left;
 }
-
 .content .left {
     width: 150px;
     padding-right: 50px;
 }
-
 .content .center {
     width: 600px;
 }
-
 .content .right {
     width: 200px;
     padding-left: 50px;
+}
+
+.footerlogo {
+    cursor: pointer;
 }
 
 #unilogo {
@@ -123,26 +133,15 @@ ul li:last-child {
     width: 375px;
 }
 
-.footerlogo {
-    cursor: pointer;
-}
-
 .language {
-    cursor: pointer;
     letter-spacing: 1.5px;
     font-size: 12px;
 }
 
 #contact {
-    cursor: pointer;
     letter-spacing: 1.5px;
     float: right;
     font-size: 12px;
-}
-
-.language:hover,
-#contact:hover {
-    color: #666;
 }
 
 #submenu {
@@ -154,7 +153,6 @@ ul li:last-child {
 }
 
 #submenu div {
-    cursor: pointer;
     border-top: 1px solid #000;
     margin-bottom: 30px;
 }
@@ -163,10 +161,6 @@ ul li:last-child {
     display: inline-block;
     padding-top: 5px;
     border-top: 2px solid #f9f9f6;
-}
-
-#submenu div:hover {
-    color: #666;
 }
 
 #submenu .active span {
@@ -184,14 +178,9 @@ ul li:last-child {
 
 #menu div {
     float: left;
-    cursor: pointer;
     margin-right: 45px;
     padding-top: 5px;
     border-top: 2px solid #f9f9f6;
-}
-
-#menu div:hover {
-    color: #666;
 }
 
 #menu .active {
@@ -231,31 +220,8 @@ ul li:last-child {
     height: auto;
 }
 
-#footer img {
-    width: 145px;
-    height: 50px;
-}
-
-#footer span {
-    cursor: pointer;
-}
-
-#footer span:hover {
-    color: #666;
-}
-
 .indented {
     padding-left: 30px;
-}
-
-.mb-0 {
-    margin-bottom: 0;
-}
-.mt-0 {
-    margin-top: 0;
-}
-
-.node {
 }
 
 .node .item {
@@ -300,6 +266,20 @@ ul li:last-child {
     color: #00a4a7;
 }
 
+.news,
+.talks {
+    margin-bottom: 1.5em;
+}
+.news h4,
+.talks h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.news figure,
+.news p {
+    margin-bottom: 0;
+}
+
 .personbox {
     overflow: hidden;
     width: 100%;
@@ -310,4 +290,11 @@ ul li:last-child {
 }
 .personbox span[property='name'] {
     font-weight: bold;
+}
+
+.sitelink span {
+    cursor: pointer;
+}
+.sitelink span:hover {
+    color: #666;
 }

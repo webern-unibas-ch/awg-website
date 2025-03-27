@@ -1,69 +1,91 @@
 import { EDITION_DATA } from './edition-data.js';
 
-$(document).ready(function () {
-    $('body').on('click', '.title', function () {
-        var node_id = $(this).parent().parent().data('id');
-        if ($('#node_' + node_id).children('.node').length > 0) {
-            if (
-                $('#node_' + node_id)
-                    .children('.node')
-                    .css('display') == 'none'
-            ) {
-                $('#node_' + node_id)
-                    .children('.node')
-                    .slideDown('fast');
-                var span = $(this).children('.plusminus');
-                if ($(span).html() == '+') $(span).html('&ndash;');
+document.addEventListener('DOMContentLoaded', function () {
+    document.body.addEventListener('click', function (event) {
+        if (event.target.closest('.title')) {
+            const titleElement = event.target.closest('.title');
+            const parentNode = titleElement.closest('.node');
+            const childNodes = parentNode.querySelectorAll(`.node`);
+
+            if (childNodes.length > 0) {
+                const isHidden = childNodes[0].style.display === 'none';
+                childNodes.forEach(node => {
+                    node.style.display = isHidden ? 'block' : 'none';
+                });
+
+                const plusMinusSpan = titleElement.querySelector('.plusminus');
+                if (plusMinusSpan) {
+                    plusMinusSpan.textContent = isHidden ? '–' : '+';
+                }
             } else {
-                $('#node_' + node_id + ' .node').slideUp('fast');
-                $(this)
-                    .parent()
-                    .parent()
-                    .find('.plusminus')
-                    .each(function () {
-                        if ($(this).html() == '\u2013') $(this).html('+');
-                    });
+                getChildren(parentNode);
+                const plusMinusSpan = titleElement.querySelector('.plusminus');
+                if (plusMinusSpan.textContent === '+') {
+                    plusMinusSpan.textContent = '–';
+                }
             }
-        } else {
-            getChildren($(this).parent().parent());
-            var span = $(this).children('.plusminus');
-            if ($(span).html() == '+') $(span).html('&ndash;');
         }
     });
 });
 
-function getChildren(_this) {
-    const id = $(_this).data('id');
-    const nodes = EDITION_DATA.nodes.filter(node => node.parent_id === id).sort((a, b) => a.sort - b.sort);
-    addChildren(_this, nodes);
+function getChildren(parentNode) {
+    const parentNodeId = parentNode.dataset.id;
+    const childNodes = EDITION_DATA.nodes
+        .filter(node => node.parent_id === parentNodeId)
+        .sort((a, b) => a.sort - b.sort);
+    if (childNodes.length > 0) {
+        addChildren(parentNode, childNodes);
+    }
 }
 
-function addChildren(_this, nodes) {
-    for (var i = 0; i < nodes.length; i++) {
-        var node = nodes[i];
-        if ($('#node_' + node.id).length > 0) continue;
+function addChildren(parentNode, nodes) {
+    nodes.forEach(node => {
+        if (document.getElementById(`node_${node.id}`)) return;
 
-        var spacerWidth = (node.depth - 1) * 20;
-        var titleWidth = 580 - spacerWidth;
-        var html = "<div class='node' id='node_" + node.id + "' data-id='" + node.id + "'>";
-        html += "<div class='item'>";
-        html += "<div class='spacer' style='width: " + spacerWidth + "px;'>&nbsp;</div>";
-        html +=
-            "<div class='title'><span class='plusminus'>" +
-            (node.rightnr - node.leftnr > 1 ? '+' : '') +
-            "</span><span class='text' style='width:" +
-            titleWidth +
-            "px;'>" +
-            (node.url != '' ? "<a href='" + node.url + "' target='_blank'>" + node.title + '</a>' : node.title) +
-            '</span></div>';
-        html += '</div>';
-        html += '</div>';
+        const spacerWidth = (node.depth - 1) * 20;
+        const titleWidth = 580 - spacerWidth;
 
-        $(html).appendTo($(_this)).hide().slideDown('fast');
-    }
+        const nodeElement = document.createElement('div');
+        nodeElement.className = 'node';
+        nodeElement.id = `node_${node.id}`;
+        nodeElement.dataset.id = node.id;
+
+        const itemElement = document.createElement('div');
+        itemElement.className = 'item';
+
+        const spacerElement = document.createElement('div');
+        spacerElement.className = 'spacer';
+        spacerElement.style.width = `${spacerWidth}px`;
+        spacerElement.innerHTML = '&nbsp;';
+
+        const titleElement = document.createElement('div');
+        titleElement.className = 'title';
+
+        const plusMinusSpan = document.createElement('span');
+        plusMinusSpan.className = 'plusminus';
+        plusMinusSpan.textContent = node.rightnr - node.leftnr > 1 ? '+' : '';
+
+        const textSpan = document.createElement('span');
+        textSpan.className = 'text';
+        textSpan.style.width = `${titleWidth}px`;
+        textSpan.innerHTML = node.url ? `<a href="${node.url}" target="_blank">${node.title}</a>` : node.title;
+
+        titleElement.appendChild(plusMinusSpan);
+        titleElement.appendChild(textSpan);
+
+        itemElement.appendChild(spacerElement);
+        itemElement.appendChild(titleElement);
+
+        nodeElement.appendChild(itemElement);
+        parentNode.appendChild(nodeElement);
+
+        nodeElement.style.display = 'block';
+    });
 
     if (nodes.length > 0) {
-        var span = $(_this).children('.item').children('.title').children('.plusminus');
-        if ($(span).html() == '+') $(span).html('&ndash;');
+        const plusMinusSpan = parentNode.querySelector('.item .title .plusminus');
+        if (plusMinusSpan) {
+            plusMinusSpan.textContent = '–';
+        }
     }
 }

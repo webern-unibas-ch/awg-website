@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function getChildren(parentNode) {
     const parentNodeId = parentNode.dataset.id;
     const childNodes = EDITION_DATA.nodes
-        .filter(node => node.parent_id === parentNodeId)
+        .filter(node => node.parent_id === parseInt(parentNodeId, 10))
         .sort((a, b) => a.sort - b.sort);
     if (childNodes.length > 0) {
         addChildren(parentNode, childNodes);

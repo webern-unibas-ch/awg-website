@@ -153,7 +153,6 @@ ul li:last-child {
 }
 
 #submenu div {
-    cursor: pointer;
     border-top: 1px solid #000;
     margin-bottom: 30px;
 }
@@ -162,10 +161,6 @@ ul li:last-child {
     display: inline-block;
     padding-top: 5px;
     border-top: 2px solid #f9f9f6;
-}
-
-#submenu div:hover {
-    color: #666;
 }
 
 #submenu .active span {
@@ -183,14 +178,9 @@ ul li:last-child {
 
 #menu div {
     float: left;
-    cursor: pointer;
     margin-right: 45px;
     padding-top: 5px;
     border-top: 2px solid #f9f9f6;
-}
-
-#menu div:hover {
-    color: #666;
 }
 
 #menu .active {

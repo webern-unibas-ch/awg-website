@@ -44,6 +44,10 @@
     margin-bottom: 20px;
 }
 
+.bibbase_paper_author {
+    display: inline-flex;
+    white-space: nowrap;
+}
 .bibbase_paper_author::after {
     content: ':';
 }

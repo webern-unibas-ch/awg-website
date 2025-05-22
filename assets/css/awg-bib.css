@@ -48,9 +48,6 @@
     display: inline-flex;
     white-space: nowrap;
 }
-.bibbase_paper_author::after {
-    content: ':';
-}
 
 .bibbase_paper_title {
     font-weight: normal !important;

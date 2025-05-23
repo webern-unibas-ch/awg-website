@@ -116,7 +116,6 @@ function _sanitizeHtml(html) {
             // Replace disallowed element with its text content
             const text = doc.createTextNode(node.textContent);
             node.parentNode.replaceChild(text, node);
-            // After replacement, walker will continue with the next node
         } else {
             // Remove all attributes from allowed tags
             while (node.attributes.length > 0) {

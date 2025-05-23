@@ -96,7 +96,13 @@ function _replacePublicationDetails(element, updatedDetails) {
     // Insert the updated content as a new span
     const detailsSpan = document.createElement('span');
     detailsSpan.className = 'bibbase_paper_details';
-    detailsSpan.innerHTML = updatedDetails;
+    detailsSpan.innerHTML = _sanitizeHtml(updatedDetails);
 
     element.parentNode.insertBefore(detailsSpan, sibling);
+}
+
+// Sanitize HTML to allow only wanted tags
+function _sanitizeHtml(html) {
+    // Remove all tags except <i> and <em>
+    return html.replace(/<(?!\/?(i|em|b|strong)\b)[^>]*>/gi, '');
 }

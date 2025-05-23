@@ -57,7 +57,7 @@ function _processAuthor(author) {
 // Process publication details string
 function _processPublicationDetails(text) {
     // Replace "In" with ", in:"
-    text = text.replace(/^In \b/, 'in: ');
+    text = text.replace(/^In\s+/, 'in: ');
     // Replace ", editor(s)," with " (Hg.),"
     text = text.replace(/, editor\(s\),/g, ' (Hg.),');
     // Replace pages with S.

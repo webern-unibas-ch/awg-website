@@ -1,55 +1,61 @@
-document.addEventListener('DOMContentLoaded', function () {
+// This script processes the author and publication details in the BibBase template
+// It normalizes the text, formats it according to specific rules, and updates the DOM accordingly
+// The script is executed when the DOM content is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
     const authors = document.querySelectorAll('.bibbase_paper_author');
     authors.forEach(author => {
-        author.textContent = processAuthor(author.textContent);
+        author.textContent = _processAuthor(author.textContent);
 
-        const publicationDetailsElement = author.closest('.bibbase_paper_titleauthoryear');
-        const publicationDetails = getPublicationDetails(publicationDetailsElement);
-        replacePublicationDetails(publicationDetailsElement, publicationDetails);
+        const detailsElement = author.closest('.bibbase_paper_titleauthoryear');
+        const details = _getPublicationDetails(detailsElement);
+        _replacePublicationDetails(detailsElement, details);
     });
 
     const titles = document.querySelectorAll('.bibbase_paper_title');
     titles.forEach(title => {
-        title.textContent = processTitle(title.textContent.trim());
+        title.textContent = _processTitle(title.textContent.trim());
     });
 });
 
-function getPublicationDetails(element) {
-    let content = '';
+// Extracts and processes publication details from title siblings
+function _getPublicationDetails(element) {
+    let details = '';
     let sibling = element.nextSibling;
 
     // Iterate through all siblings until the `.note` span is reached
     while (sibling && !(sibling.classList && sibling.classList.contains('note'))) {
         if (sibling.nodeType === Node.TEXT_NODE && sibling.textContent.trim() !== '') {
-            content += sibling.textContent.trim();
+            details += sibling.textContent.trim();
         } else if (sibling.nodeType === Node.ELEMENT_NODE) {
-            content += ' ' + sibling.outerHTML.trim();
+            details += ' ' + sibling.outerHTML.trim();
         }
         sibling = sibling.nextSibling;
     }
 
-    const normalizedContent = normalizeText(content);
-    return processPublicationDetails(normalizedContent);
+    const normalizedDetails = _normalizeText(details);
+    return _processPublicationDetails(normalizedDetails);
 }
 
-function normalizeText(text) {
-    // Replace multiple spaces & line feeds with a single space
+// Normalize multiple spaces & line feeds with a single space
+function _normalizeText(text) {
     return text.replace(/\s+/g, ' ').trim();
 }
 
-function processAuthor(author) {
-    const normalizedText = normalizeText(author);
+// Process author string
+function _processAuthor(author) {
+    const normalizedAuthor = _normalizeText(author);
 
-    if (normalizedText.endsWith('editor.')) {
-        return normalizedText.slice(0, -9) + ' (Hg.):';
-    } else if (normalizedText.endsWith('editors.')) {
-        return normalizedText.slice(0, -10) + ' (Hg.):';
+    if (normalizedAuthor.endsWith('editor.')) {
+        return normalizedAuthor.slice(0, -9) + ' (Hg.):';
+    } else if (normalizedAuthor.endsWith('editors.')) {
+        return normalizedAuthor.slice(0, -10) + ' (Hg.):';
     } else {
-        return normalizedText + ':';
+        return normalizedAuthor + ':';
     }
 }
 
-function processPublicationDetails(text) {
+// Process publication details string
+function _processPublicationDetails(text) {
     // Replace "In" with ", in:"
     text = text.replace(/^In \b/, 'in: ');
     // Replace ", editor(s)," with " (Hg.),"
@@ -68,27 +74,29 @@ function processPublicationDetails(text) {
     return text;
 }
 
-function processTitle(title) {
+// Process title string
+function _processTitle(title) {
     if (title.endsWith('“.')) {
         return title.slice(0, -1) + ',';
     }
     return title;
 }
 
-function replacePublicationDetails(element, updatedContent) {
+// Replace publication details in DOM
+function _replacePublicationDetails(element, updatedDetails) {
     let sibling = element.nextSibling;
 
     // Iterate through all siblings until the `.note` span is reached
     while (sibling && !(sibling.classList && sibling.classList.contains('note'))) {
-        const nextSibling = sibling.nextSibling; // Save reference to the next sibling
-        sibling.remove(); // Remove the current sibling
-        sibling = nextSibling; // Move to the next sibling
+        const next = sibling.nextSibling;
+        sibling.remove();
+        sibling = next;
     }
 
     // Insert the updated content as a new span
     const detailsSpan = document.createElement('span');
     detailsSpan.className = 'bibbase_paper_details';
-    detailsSpan.innerHTML = updatedContent;
+    detailsSpan.innerHTML = updatedDetails;
 
     element.parentNode.insertBefore(detailsSpan, sibling);
 }

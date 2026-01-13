@@ -1,5 +1,4 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/webern-unibas-ch/awg-website)
-![CI Workflow](https://github.com/webern-unibas-ch/awg-website/actions/workflows/ci_workflow.yml/badge.svg)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/webern-unibas-ch/awg-website/badge)](https://scorecard.dev/viewer/?uri=github.com/webern-unibas-ch/awg-website)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.1%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
 

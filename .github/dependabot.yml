@@ -8,3 +8,7 @@ updates:
       target-branch: 'main'
       labels:
           - 'gh actions dependencies'
+      groups:
+          github/codeql-action:
+              patterns:
+                  - 'github/codeql-action/*'

@@ -8,12 +8,15 @@ on:
             - '*'
     pull_request:
         branches: [main]
+    schedule:
+        - cron: '0 0 * * 1'
 
 permissions:
     contents: read
 
 jobs:
     analyze:
+        if: github.repository_owner == 'webern-unibas-ch'
         name: Analyze
         runs-on: ubuntu-latest
         permissions:

@@ -4,11 +4,23 @@ updates:
     - package-ecosystem: 'github-actions'
       directory: '/'
       schedule:
-          interval: 'daily'
+          interval: 'weekly'
+      cooldown:
+          default-days: 3
       target-branch: 'main'
       labels:
           - 'gh actions dependencies'
+      # an action joins the first group it matches
       groups:
+          # the codeql sub-actions only work in matching versions, so always update them together
           github/codeql-action:
               patterns:
                   - 'github/codeql-action/*'
+          # minor and patch updates of all other actions in one PR, major updates separately
+          # (scorecards only runs on main and on a schedule, so PR checks don't cover it)
+          github-actions:
+              patterns:
+                  - '*'
+              update-types:
+                  - 'minor'
+                  - 'patch'

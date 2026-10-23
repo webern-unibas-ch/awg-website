@@ -19,6 +19,7 @@ permissions: read-all
 
 jobs:
     analysis:
+        if: github.repository_owner == 'webern-unibas-ch'
         name: Scorecard analysis
         runs-on: ubuntu-latest
         permissions:
